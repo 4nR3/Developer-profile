@@ -110,10 +110,17 @@ function alternarColorTema() {
 
 let ocultoBool=false;
 
-window.addEventListener("keypress",function(letraPulsada){
-    
+function mostrarTexto(letraPulsada){
+
   let miLetra=letraPulsada.code;
   let claseOculta=document.getElementById("sobre-mi");
+  let boton = document.getElementById("botonMostrarTexto");
+
+  if(letraPulsada=='reemplazar'){
+    miLetra="KeyF";
+    boton.innerText="Oculta el texto";
+
+  }
       
    if(miLetra=="KeyF")
     {
@@ -122,8 +129,15 @@ window.addEventListener("keypress",function(letraPulsada){
         ocultoBool=true;}
       else
         {claseOculta.classList.add("oculto");
-        ocultoBool=false}
+        ocultoBool=false
+        boton.innerText="Visualizá el texto";
+      }
     }  
 
-  });
+  }
+
+
+  window.addEventListener("keypress",mostrarTexto);
+
+
   

@@ -24,12 +24,6 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
-h3 {
-  margin: 0.5rem auto;
-  width: 50%;
-  text-align: left;
-}
-
 button {
   padding: 10px 25px;
   border: none;
@@ -48,10 +42,10 @@ button:hover {
 }
 
 #developer {
-  width: 10%;
   margin: 1rem auto;
   display: block;
 }
+
 .card-header {
   box-shadow: var(--shadow);
   border-radius: 10px;
@@ -66,8 +60,8 @@ button:hover {
   display: flex;
   justify-content: space-around;
 }
+
 .caja {
-  width: 30%;
   text-align: center;
   border: var(--border-gray);
   box-shadow: var(--shadow);
@@ -101,7 +95,6 @@ button:hover {
 }
 
 #card {
-  width: 40%;
   margin: 25px auto;
   padding: 25px;
   color: var(--white);
@@ -117,4 +110,147 @@ button:hover {
 
 .oculto{
   visibility: hidden;
+}
+
+@media only screen and (max-width: 464px){
+
+  #developer{
+    width: 50%;
+  }
+
+  #completar-perfil, #obtener-materias, #cambiar-tema{
+    position: relative;
+    display: block;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    width: 60%;
+  }
+
+  .card-header{
+    width: 100%;
+  }
+
+  h3 {
+    margin: 0.5rem auto;
+  }
+
+  #fila{
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .caja{
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+  #card{
+    width: 100%;
+  }
+
+  small{
+    display: none;
+  }
+
+  .botonMostrar{
+    background-color: beige;
+    color: #000;
+  }
+
+}
+
+@media only screen and (min-width: 465px) and (max-width: 1365px){
+
+  h1{
+    font-size: 5vh;
+  }
+
+  #developer{
+    width: 40%;
+  }
+
+  button{
+    font-size: 2vh;
+  }
+
+  #completar-perfil, #obtener-materias, #cambiar-tema{
+    position: relative;
+    display: block;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    width: 60%;
+  }
+
+  .card-header{
+    width: 100%;
+  }
+
+  h3 {
+    margin: 0.5rem auto;
+  }
+
+  #fila{
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .caja{
+    width: 70%;
+    margin-bottom: 5%;
+  }
+
+  .caja p{
+    font-size: 3vh;
+  }
+
+  #card{
+    width: 100%;
+  }
+
+  small{
+    display: none;
+  }
+
+  .botonMostrar{
+    background-color: beige;
+    color: #000;
+  }
+
+  #sobre-mi{
+    font-size: 2.25vh;
+  }
+
+}
+
+@media only screen and (min-width: 1366px){
+  #developer{
+    width: 10%;
+  }
+
+  h3 {
+    margin: 0.5rem auto;
+    width: 50%;
+    text-align: left;
+  }
+
+  .caja{
+    width: 30%;
+  }
+
+  #card{
+    width: 40%;
+  }
+
+  .botonMostrar{
+    display: none;
+  }
+
 }
